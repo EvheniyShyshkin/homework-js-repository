@@ -1,0 +1,24 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #133;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+/*TABLE*/
+
+table, tr, td, th {
+    border: 2px solid rgb(92, 85, 85);
+}
