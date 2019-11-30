@@ -5,9 +5,10 @@ $.ajax({
         var str = '';
 
 for(let el of data) {
-        str += '<tr><td>' + el.name + '<td><td>' + el.region + '<td><td>' + el.population
-        + '<td><td>' + el.area + '<td><td>' + el.flag + '<td><td>' + el.numericCode + '</td></tr>';
-        $('table').html(str);
+            str += '<tr><td>' + el.name + '<td><td>' + el.region + '<td><td>' + el.population
+            + '<td><td>' + el.area + '<td><td><img src="' + el.flag + '" width="80px" height="50px"><td><td>'
+            + el.numericCode + '</ttd></tr>';
+            $('table').html(str);
     }
  }
 });
