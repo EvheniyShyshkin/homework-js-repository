@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../js13/main.css">
+    <title>Document</title>
+    <style>
+
+        .table__privat, th, tr, td {
+            border: 2px solid #ddd;
+            font-size: 20px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="table table__privat"></table>
+
+
+    <script>
+    
+    $.ajax({
+    url: 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json',
+    success: function(data) {
+        console.log(data);
+        var str = '';
+        for(let el of data) {
+            str += '<tr><td>' + el.txt + '<td><td>' + el.rate.toFixed(2) + '</td></tr>';
+        }
+        $('table').html(str);
+    }
+
+});
+    
+    </script>
+</body>
+</html>
