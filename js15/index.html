@@ -49,32 +49,40 @@
         [0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0],
-    ];
+    ]; 
 
     function drawBoard(){
         let str = '';
-        let mark = 0;
+        let mark = 0; 
 
-        for(let i = 0; i < board.length; i++){
+        for(let i = 0; i < board.length; i++){ 
 
-            for(let e = 0; e < board.length; e++){
+            for(let e = 0; e < board.length; e++){ 
                 if(mark % 2 == 0) {
-                    str += '<div class="chess__block white"></div>';
+                    str += '<div class="chess__block white"></div>'; 
                 }
-                else {
-                    str += '<div class="chess__block black"></div>';
+                else { 
+                    str += '<div class="chess__block black"></div>'; 
                 }
-                mark++;
+                mark++; 
             }
-            mark++;
+            mark++; 
         }
-        $('#board').html(str);
+        $('#board').html(str); 
     }
-    drawBoard();
+    drawBoard(); 
 
     $('.chess__block').on('click', function(){
-       $('.chess__block').css('float', 'right');
+        $('.chess__block').css('float', 'right');
+            $('.chess__block').on('click', function(){
+                $('.chess__block').css('float', 'left');
+            });
     });
+
+
+
+
+    
 
     </script>
 </body>
